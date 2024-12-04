@@ -24,6 +24,7 @@
 
     # always loaded
     'data': [
+        'data/data.xml',
         'security/hostel_security.xml',
         'security/ir.model.access.csv',
         'views/hostel.xml',

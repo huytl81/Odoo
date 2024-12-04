@@ -8,11 +8,11 @@ class Hostel(models.Model):
     _description = "Information about hostel"
     _order = "id desc, name"
     _rec_name = 'hostel_code'
-    _rec_names_search = ['name', 'hostel_code'] #similar to using the name_search function.
+    _rec_names_search = ['name', 'hostel_code', 'email', 'mobile'] #similar to using the name_search function.
 
-    name = fields.Char(string="hostel Name", required=True)
-    hostel_code = fields.Char(string="Code", required=True)
-    street = fields.Char('Street')
+    name = fields.Char(string="Hostel Name", required=True)
+    hostel_code = fields.Char(string="Hostel Code", required=True)
+    street = fields.Char('Street', required=True)
     street2 = fields.Char('Street2')
     zip = fields.Char('Zip', change_default=True)
     city = fields.Char('City')
@@ -21,6 +21,15 @@ class Hostel(models.Model):
     phone = fields.Char('Phone', required=True)
     mobile = fields.Char('Mobile', required=True)
     email = fields.Char('Email')
+    hostel_floors = fields.Integer(string="Total Floors")
+    image = fields.Binary('Hostel Image')
+    active = fields.Boolean("Active", default=True, help="Activate/Deactivate hostel record")
+    type = fields.Selection([("male", "Boys"), ("female","Girls"),("common", "Common")], "Type", help="Type of Hostel",required=True, default="common")
+    other_info = fields.Text("Other Information", help="Enter more information")
+    description = fields.Html('Description')
+    #hostel_rating = fields.Float('Hostel Average Rating',digits=(14, 4)) # Method 1: Optional precision (total,decimals)
+    hostel_rating = fields.Float('Hostel Average Rating', digits = 'Rating Value')  # Method 2
+    hostel_room_ids = fields.One2many('hostel.room', 'hostel_id', string="Rooms")
 
 
     @api.depends('hostel_code')
