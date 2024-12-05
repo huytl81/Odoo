@@ -53,6 +53,6 @@
 
 
     <!-- Menu -->
-    <menuitem id="cat_menu" name="Cat" parent="animal_menu" action="cat_action"/>
+    <menuitem id="cat_menu" name="Cat" parent="animal_menu" action="cat_action" sequence="2"/>
 
 </odoo>

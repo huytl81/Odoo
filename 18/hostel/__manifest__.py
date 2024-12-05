@@ -28,7 +28,7 @@
         'security/hostel_security.xml',
         'security/ir.model.access.csv',
         'views/hostel.xml',
-        'views/templates.xml',
+        'views/hostel_room.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

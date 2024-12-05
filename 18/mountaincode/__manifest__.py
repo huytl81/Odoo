@@ -25,10 +25,10 @@
         'security/cat_security.xml',
         'security/club_security.xml',
         'security/ir.model.access.csv',
+        'views/club_view.xml',
         'views/player_view.xml',
         'views/dog_view.xml',
         'views/cat_view.xml',
-        'views/club_view.xml',
         'wizards/dog_wizard_view.xml'
     ]
 }

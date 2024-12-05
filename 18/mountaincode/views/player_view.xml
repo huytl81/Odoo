@@ -56,12 +56,13 @@
 
     <!-- Action -->
     <record id="player_action" model="ir.actions.act_window">
+        <field name="name">Players</field>
         <field name="res_model">player</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <!-- menu -->
-    <menuitem id="manager_menu" name="Football Manager" groups="group_player_user" />
-    <menuitem id="player_menu" name="Players" parent="manager_menu" action="player_action" groups="group_player_user" />
+    <menuitem id="player_menu" name="Players" parent="manager_menu" action="player_action" sequence="2"/>
     <!-- Search View -->
 <!--    <record id="view_player_search" model="ir.ui.view">-->
 <!--        <field name="name">player.search</field>-->

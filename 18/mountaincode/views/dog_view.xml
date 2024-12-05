@@ -60,7 +60,7 @@
 
 
     <!-- Menu -->
-    <menuitem id="animal_menu" name="Animal"/>
-    <menuitem id="dog_menu" name="Dog" parent="animal_menu" action="dog_action"/>
+    <menuitem id="animal_menu" name="Animal" sequence="2"/>
+    <menuitem id="dog_menu" name="Dog" parent="animal_menu" action="dog_action" sequence="1"/>
 
 </odoo>
