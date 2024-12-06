@@ -29,7 +29,7 @@ class Hostel(models.Model):
     description = fields.Html('Description')
     #hostel_rating = fields.Float('Hostel Average Rating',digits=(14, 4)) # Method 1: Optional precision (total,decimals)
     hostel_rating = fields.Float('Hostel Average Rating', digits = 'Rating Value')  # Method 2
-    hostel_room_ids = fields.One2many('hostel.room', 'hostel_id', string="Rooms")
+    hostel_room_ids = fields.One2many(comodel_name="hostel.room", inverse_name="hostel_id", string="Rooms")
 
 
     @api.depends('hostel_code')

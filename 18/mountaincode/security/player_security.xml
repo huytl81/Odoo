@@ -4,7 +4,7 @@
     <data noupdate="0">
         <record id="module_category_player" model="ir.module.category">
             <field name="name">Player category</field>
-            <field name="sequence">1</field>
+            <field name="sequence">4</field>
         </record>
 
         <record id="group_player_user" model="res.groups">

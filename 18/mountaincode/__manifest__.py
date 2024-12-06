@@ -21,9 +21,9 @@
     'depends': ['base'],
     'data': [
         'security/player_security.xml',
+        'security/club_security.xml',
         'security/dog_security.xml',
         'security/cat_security.xml',
-        'security/club_security.xml',
         'security/ir.model.access.csv',
         'views/player_view.xml',
         'views/dog_view.xml',

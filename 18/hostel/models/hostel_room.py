@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 
-class HotelRoom(models.Model):
+class HostelRoom(models.Model):
     _name="hostel.room"
     _description="Hostel Room"
 
@@ -13,7 +13,7 @@ class HotelRoom(models.Model):
     room_type = fields.Selection([('single', 'Single'), ('double', 'Double'), ('triple', 'Triple')], string="Room Type")
     image = fields.Binary(string="Image")
     active = fields.Boolean(string="Active", default=True)
-    hostel_id = fields.Many2one(comodel_name="hostel.hostel", string="Hostel")
+    hostel_id = fields.Many2one(comodel_name='hostel.hostel', string="Hostel Name")
     currency_id = fields.Many2one(comodel_name="res.currency", string="Currency")
     # optional attribute: currency_field = 'currency_id' incase currency field have another name then 'currency_id'
     rent_amount = fields.Monetary('Rent Amount', help="Enter rent amount per month")

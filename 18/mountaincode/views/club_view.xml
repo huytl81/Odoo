@@ -29,11 +29,11 @@
 
     <!-- Action -->
     <record id="club_action" model="ir.actions.act_window">
-        <field name="name">Club</field>
+        <field name="name">Clubs</field>
         <field name="res_model">club</field>
         <field name="view_mode">list,form</field>
     </record>
 
     <!-- Menu Items -->
-    <menuitem id="club_menu" name="Club" parent="manager_menu" action="club_action" groups="group_club_manager"/>
+    <menuitem id="club_menu" name="Club" parent="manager_menu" action="club_action"/>
 </odoo>
