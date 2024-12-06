@@ -35,5 +35,6 @@
     </record>
 
     <!-- Menu Items -->
-    <menuitem id="club_menu" name="Club" parent="manager_menu" action="club_action"/>
+    <menuitem id="manager_menu" name="Football Manager" sequence="1"/>
+    <menuitem id="club_menu" name="Clubs" parent="manager_menu" action="club_action" sequence="1"/>
 </odoo>
