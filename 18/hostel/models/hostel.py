@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from unicodedata import category
 
 from odoo import fields, models, api
 
@@ -9,9 +10,11 @@ class Hostel(models.Model):
     _order = "id desc, name"
     _rec_name = 'hostel_code'
     _rec_names_search = ['name', 'hostel_code', 'email', 'mobile'] #similar to using the name_search function.
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char(string="Hostel Name", required=True)
     hostel_code = fields.Char(string="Hostel Code", required=True)
+    category_id = fields.Many2one(comodel_name='hostel.category', string="Hostel Category")
     street = fields.Char('Street', required=True)
     street2 = fields.Char('Street2')
     zip = fields.Char('Zip', change_default=True)

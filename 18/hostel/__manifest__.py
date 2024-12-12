@@ -20,13 +20,16 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'mail'],
 
     # always loaded
     'data': [
         'data/data.xml',
+        'security/hostel_category_security.xml',
         'security/hostel_security.xml',
+        'security/hostel_room_security.xml',
         'security/ir.model.access.csv',
+        'views/hostel_category.xml',
         'views/hostel.xml',
         'views/hostel_room.xml'
     ],
